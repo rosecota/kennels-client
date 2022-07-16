@@ -14,7 +14,7 @@ export const CustomerList = () => {
   }, [])
 
   return (
-    <div style={{ margin: "0rem 3rem" }}>
+    <>
       <h1>Customers</h1>
       <article className="customers">
         {
@@ -24,6 +24,6 @@ export const CustomerList = () => {
           })
         }
       </article>
-    </div>
+    </>
   )
 }

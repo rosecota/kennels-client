@@ -30,7 +30,7 @@ export const LocationList = () => {
   }, [employees, animals])
 
   return (
-    <div style={{ margin: "0rem 3rem" }}>
+    <>
       <h1>Locations</h1>
 
       <div className="locations">
@@ -40,6 +40,6 @@ export const LocationList = () => {
           })
         }
       </div>
-    </div>
+    </>
   )
 }

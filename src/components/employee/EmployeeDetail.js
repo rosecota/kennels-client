@@ -15,16 +15,20 @@ export const EmployeeDetail = () => {
   }, [employeeId])
 
   return (
-    <section className="employee">
-      <h3 className="employee__name">{employee.name}</h3>
-      <div>Currently working at {employee.location?.name}</div>
-      <div>
-        {
-          (employee.animal === undefined)
-            ? "Not assigned to an animal"
-            : `Currently taking care of ${employee.animal?.name}`
-        }
-      </div>
-    </section>
+    <>
+      <h1>Employees</h1>
+
+      <section className="employee">
+        <h3 className="employee__name">{employee.name}</h3>
+        <div>Currently working at {employee.location?.name}</div>
+        <div>
+          {
+            (employee.animal === undefined)
+              ? "Not assigned to an animal"
+              : `Currently taking care of ${employee.animal?.name}`
+          }
+        </div>
+      </section>
+    </>
   )
 }

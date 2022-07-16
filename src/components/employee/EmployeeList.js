@@ -13,10 +13,10 @@ export const EmployeeList = () => {
   }, [])
 
   return (
-    <div style={{ margin: "0rem 3rem" }}>
+    <>
       <h1>Employees</h1>
 
-      <button onClick={() => navigate("/employees/create")}>
+      <button className="btn btn-primary btn-sm" onClick={() => navigate("/employees/create")}>
         Add Employee
       </button>
 
@@ -27,6 +27,6 @@ export const EmployeeList = () => {
           })
         }
       </article>
-    </div>
+    </>
   )
 }

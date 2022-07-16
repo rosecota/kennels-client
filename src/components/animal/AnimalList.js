@@ -25,9 +25,10 @@ export const AnimalList = () => {
 
   return (
     <>
+      <h1>Animals</h1>
       <AnimalSearch onSearchTermChange={onSearchTermChange} searchTerm={searchTerm} />
       <div style={{ marginTop: "2rem" }}>
-        <button onClick={() => navigate("/animals/create")}>
+        <button className="btn btn-primary btn-sm" onClick={() => navigate("/animals/create")}>
           Make Reservation
         </button>
         <div className="animals">
