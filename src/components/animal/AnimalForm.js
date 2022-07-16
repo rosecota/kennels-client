@@ -40,8 +40,8 @@ export const AnimalForm = () => {
           name: animal.name,
           breed: animal.breed,
           locationId: locationId,
-          treatment: animal.treatment,
-          customerId: parseInt(localStorage.getItem("kennel_customer"))
+          status: animal.status,
+          customerId: parseInt(localStorage.getItem("kennels_customer"))
         })
           .then(() => navigate("/animals"))
       } else {
@@ -50,8 +50,8 @@ export const AnimalForm = () => {
           name: animal.name,
           breed: animal.breed,
           locationId: locationId,
-          treatment: animal.treatment,
-          customerId: parseInt(localStorage.getItem("kennel_customer"))
+          status: animal.status,
+          customerId: parseInt(localStorage.getItem("kennels_customer"))
         })
           .then(() => navigate("/animals"))
       }
@@ -101,9 +101,9 @@ export const AnimalForm = () => {
       </fieldset>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="treatment">Treatments: </label>
-          <textarea type="text" name="treatment" className="form-control"
-            value={animal.treatment}
+          <label htmlFor="treatment">Status: </label>
+          <textarea type="text" name="status" className="form-control"
+            value={animal.status}
             onChange={handleControlledInputChange}>
           </textarea>
         </div>
@@ -114,7 +114,7 @@ export const AnimalForm = () => {
           constructNewAnimal()
         }}
         className="btn btn-primary">
-        {animalId ? "Save Updates" : "Make Reservation"}
+        {animalId ? "Save Updates" : "Save Reservation"}
       </button>
     </form>
   )
